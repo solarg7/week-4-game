@@ -1,0 +1,40 @@
+.squareRed {
+    width: 140px;
+    /*border-style:2px solid red;*/
+    background: green;
+    padding: 4px;
+    
+    margin: 2px;
+    text-align: center;
+    height: 200px;
+  }
+
+  .token {
+    background: green;
+    height: 160px;
+  }
+
+  .squareGreen {
+    /*width: 140px;
+    /*border-style:2px solid red;*/
+    background: green;
+    /*padding: 4px;
+    
+    margin: 2px;
+    text-align: center;
+    height: 200px;*/
+  }
+
+
+  .card1 {
+    width: 140px;
+    /*height: 200px;*/
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+  }
+
+  .cardColor {
+    color: orange;
+  }
