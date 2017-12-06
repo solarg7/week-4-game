@@ -3,89 +3,43 @@ window.onload = function() {
 	$(document).ready(function() {
       // Here we are provided an initial array of letters.
       // Use this array to dynamically create buttons on the screen.s
-      var fighterLibrary = [{name: "Boba Fett", src: "./assets/images/bobafett.png"}, {name: "Chewbacca", src: "./assets/images/chewbacca.png"}, {name: "Han Solo", src: "./assets/images/hansolo.png"}, {name: "Darth Vader", src: "./assets/images/darthvader.png"}];
-      // MAJOR TASK #1: DYNAMICALLY CREATE BUTTONS
-      // =================================================================================
-      // 1. Create a for-loop to iterate through the letters array.
+      var fighterLibrary = [{name: "Boba Fett", src: "./assets/images/bobafett.png", healthPointF: 120}, {name: "Chewbacca", src: "./assets/images/chewbacca.png", healthPointF: 120}, {name: "Han Solo", src: "./assets/images/hansolo.png" , healthPointF: 120}, {name: "Darth Vader", src: "./assets/images/darthvader.png", healthPointF: 120}];
       
-	
+      	var healthP0= $("<div>");
+      	healthP0.text(fighterLibrary[3].healthPointF);
+    
+       
+        var ides = "container2"
+        var container11 = $("<div>");
+
+        var nameFighter1 = $("<div>");
 
 
+        var nameF0 = $("<div>");
+        var imageF0 = $("<img>")
+        var nameF = fighterLibrary[0].name;
+        nameFighter1.attr("id", nameF);
+        nameFighter1 = fighterLibrary[3].name
+        nameF0.text(fighterLibrary[3].name);
+        imageF0.attr("src", fighterLibrary[3].src);
+
+        container11.attr("id", ides);
+           	$("#linea1").append(container11);
+
+        	$("#" + ides).append(nameF0);
+
+        	$("#" + ides).append(imageF0)
 
 
-	  	for (var i = 0; i < fighterLibrary.length; i++) {
-        // Inside the loop...
-        // 2. Create a variable named "letterBtn" equal to $("<button>");
-        var fighterImage = $("<img>");
-        // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-        fighterImage.addClass("card1 cardColor");
-        // 4. Then give each "letterBtn" a data-attribute called "data-letter".
-        fighterImage.attr("data-letter", fighterLibrary[i].name);
+        	$("#" + ides).append(healthP0);
+        	//$("#nameF").text(nameFighter1);
 
-        fighterImage.attr("src", fighterLibrary[i].src)
-        // 5. Then give each "letterBtns" a text equal to "letters[i]".
-        fighterImage.text(fighterLibrary[i].name);
-        // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
-        $("#buttons").append(fighterImage.src + fighterLibrary[i].name);
-        }
-
-
-	  	for (var i = 0; i < fighterLibrary.length; i++) {
         
-		//$("#" + this.id).append("hola");
-	  	var ides = "container2"
-
-
-        var container11 = $("<a>");
-		container11.attr("id", ides)
-
-
-
-		$("#" + ides).append("hola");
-
-
 		
 
 
-
-        // Inside the loop...
-        // 2. Create a variable named "letterBtn" equal to $("<button>");
-        var fighterImage = $("<img>");
-        // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-        fighterImage.addClass("card1 cardColor");
-        // 4. Then give each "letterBtn" a data-attribute called "data-letter".
-        fighterImage.attr("data-letter", fighterLibrary[i].name);
-
-        fighterImage.attr("src", fighterLibrary[i].src)
-        // 5. Then give each "letterBtns" a text equal to "letters[i]".
-        fighterImage.text(fighterLibrary[i].name);
-        // 6. Finally, append each "letterBtn" to the "#buttons" div (provided).
-
-
-
-        $("#container1 .nameFighter").text(fighterLibrary[i].name);
-        
-
-        $("#container1 .imageFighter").attr("src",fighterLibrary[0].src);
+		for (var i = 0; i < fighterLibrary.length; i++) {
         }
-
-		
-        $(".row").append(container11);
-
-        
-
-
-        var fighterImage11 = $("<img>");
-        // 3. Then give each "letterBtn" the following classes: "letter-button" "letter" "letter-button-color".
-        fighterImage11.addClass("card1 cardColor");
-        // 4. Then give each "letterBtn" a data-attribute called "data-letter".
-        fighterImage11.attr("data-letter", fighterLibrary[2].name);
-
-        fighterImage11.attr("src", fighterLibrary[2].src)
-        // 5. Then give each "letterBtns" a text equal to "letters[i]".
-        fighterImage11.text(fighterLibrary[2].name);
-
-
 	  
 
 /*$('#button2').prepend(fighterImage);*/
