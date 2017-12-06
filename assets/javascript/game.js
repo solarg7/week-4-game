@@ -3,42 +3,46 @@ window.onload = function() {
 	$(document).ready(function() {
       // Here we are provided an initial array of letters.
       // Use this array to dynamically create buttons on the screen.s
-      var fighterLibrary = [{name: "Boba Fett", src: "./assets/images/bobafett.png", healthPointF: 120}, {name: "Chewbacca", src: "./assets/images/chewbacca.png", healthPointF: 120}, {name: "Han Solo", src: "./assets/images/hansolo.png" , healthPointF: 120}, {name: "Darth Vader", src: "./assets/images/darthvader.png", healthPointF: 120}];
+      var fighterLibrary = [{name: "Boba Fett", src: "./assets/images/bobafett.png", healthPointF: 120}, {name: "Chewbacca", src: "./assets/images/chewbacca.png", healthPointF: 120}, {name: "Han Solo", src: "./assets/images/hansolo.png" , healthPointF: 120}, {name: "Darth Vader", src: "./assets/images/darthvader.png", healthPointF: 150}];
       
-      	var healthP0= $("<div>");
-      	healthP0.text(fighterLibrary[3].healthPointF);
+      	
+      	
     
        
-        var ides = "container2"
-        var container11 = $("<div>");
+    	for (var i = 0; i < fighterLibrary.length; i++) {    
+	        var ides = "cont" + i
 
-        var nameFighter1 = $("<div>");
+	        //hacerlo relativo
+	        var container11 = $("<a>");
 
+	        var nameFighter1 = $("<div>");
+			var healthP0= $("<div>");
 
-        var nameF0 = $("<div>");
-        var imageF0 = $("<img>")
-        var nameF = fighterLibrary[0].name;
-        nameFighter1.attr("id", nameF);
-        nameFighter1 = fighterLibrary[3].name
-        nameF0.text(fighterLibrary[3].name);
-        imageF0.attr("src", fighterLibrary[3].src);
+	        var nameF0 = $("<div>");
+	        var imageF0 = $("<img>")
+	        var nameF = fighterLibrary[i].name;
+	        nameFighter1.attr("id", nameF);
+	        nameFighter1 = fighterLibrary[i].name
+	        nameF0.text(fighterLibrary[i].name);
+	        imageF0.attr("src", fighterLibrary[i].src);
+	        healthP0.text(fighterLibrary[i].healthPointF)
 
-        container11.attr("id", ides);
-           	$("#linea1").append(container11);
+	        container11.attr("id", ides);
+	        container11.addClass("container2")
+	           	$("#linea1").append(container11);
 
-        	$("#" + ides).append(nameF0);
+	        	$("#" + ides).append(nameF0);
 
-        	$("#" + ides).append(imageF0)
+	        	$("#" + ides).append(imageF0);
 
-
-        	$("#" + ides).append(healthP0);
-        	//$("#nameF").text(nameFighter1);
+	        	$("#" + ides).append(healthP0);
+	        	//$("#nameF").text(nameFighter1);
 
         
 		
 
 
-		for (var i = 0; i < fighterLibrary.length; i++) {
+		
         }
 	  
 

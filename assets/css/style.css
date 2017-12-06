@@ -39,10 +39,11 @@
     color: orange;
   }
 
-  #container2 {
+  .container2 {
     text-align: center;
     color: orange;
     width: 200px;
+    height: 350px;
     border-style: solid;
     padding: 2px;
     float: left;
