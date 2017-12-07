@@ -53,3 +53,19 @@
     float: left;
     margin: 20px;
   }
+
+
+  .container3 {
+    text-align: center;
+    color: orange;
+    width: 200px;
+    height: 350px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+    margin: 20px;
+  }
