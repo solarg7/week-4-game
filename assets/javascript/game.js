@@ -45,9 +45,10 @@ window.onload = function() {
 	        	$("#" + ides).append(imageF0);
 
 	        	$("#" + ides).append(healthP0);
-	        	//$("#nameF").text(nameFighter1);
+	    }
 
-        }
+
+
 	  $(".containerButton").on("click", function () {
 
 	  	var yourFighter = $("<a>");
@@ -91,20 +92,43 @@ window.onload = function() {
 	        	$(".container2").append(healthP0);
 	        	//$("#nameF").text(nameFighter1);
 
+	        		for (var i = 0; i < fighterLibrary.length; i++) {    
+	        var ides = "cont" + i
+
+	        //hacerlo relativo
+	        var container11 = $("<a>");
+
+	        var nameFighter1 = $("<div>");
+			var healthP0= $("<div>");
+
+	        var nameF0 = $("<div>");
+	        var imageF0 = $("<img>")
+	        var nameF = fighterLibrary[i].name;
+	        nameFighter1.attr("id", nameF);
+	        nameFighter1 = fighterLibrary[i].name
+	        nameF0.text(fighterLibrary[i].name);
+	        imageF0.attr("src", fighterLibrary[i].src);
+	        healthP0.text(fighterLibrary[i].healthPointF)
 
 
 
+	        container11.attr("id", ides);
+	        container11.addClass("container2 containerButton")
+	        container11.attr("fight", fighterLibrary[i].name);
+
+	        container11.attr("fightFoto", fighterLibrary[i].src);
+
+			container11.attr("fightHealth", fighterLibrary[i].healthPointF);
 
 
+	           	$("#linea2").append(container11);
 
+	        	$("#" + ides).append(nameF0);
 
+	        	$("#" + ides).append(imageF0);
 
-
-
-
-
-
-	  	// body...
+	        	$("#" + ides).append(healthP0);
+	    }
 	  })
 
 /*$('#button2').prepend(fighterImage);*/
