@@ -67,8 +67,7 @@ window.onload = function() {
 	        //hacerlo relativo
 	        var container11 = $("<a>");
 
-	        var nameFighter1 = $("<div>");
-			var healthP0= $("<div>");
+	    	var healthP0= $("<div>");
 
 	        var nameF0 = $("<div>");
 	        var imageF0 = $("<img>")
@@ -76,7 +75,7 @@ window.onload = function() {
 	        
 
 			nameF0.text($(this).attr("fight"));
-	        imageF0.src($(this).attr("fightFoto"));
+	        imageF0.attr("src", ($(this).attr("fightFoto")));
 			healthP0.text($(this).attr("fightHealth"));
 
 
@@ -85,11 +84,11 @@ window.onload = function() {
 	        container11.addClass("container2 containerButton")
 	           	$("#linea1").html(container11);
 
-	        	$("container2").append(nameF0);
+	        	$(".container2").append(nameF0);
 
-	        	$("#container2").append(imageF0);
+	        	$(".container2").append(imageF0);
 
-	        	$("#container2").append(healthP0);
+	        	$(".container2").append(healthP0);
 	        	//$("#nameF").text(nameFighter1);
 
 
