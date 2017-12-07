@@ -127,6 +127,7 @@ window.onload = function() {
 
 				container11.attr("fightHealth", fighterLibrary[i].healthPointF);
 
+				container11.attr("indexX", fighterLibrary[i].inde);
 				
 		           	$("#linea2").append(container11);
 
@@ -137,7 +138,7 @@ window.onload = function() {
 		        	$("#" + ides).append(healthP0);
 	    	}
 	    	
-	    	var idc = "cont"+indice
+	    	
 	    	console.log(indice)
 	    	$("#"+ indice).hide();
 
@@ -148,10 +149,7 @@ window.onload = function() {
 				  	yourFighter.text($(this).attr("fight.name"))
 				  	yourFighter.addClass("container2");
 
-				var indice0 = "";
-				indice0 = ($(this).attr("indexX"));
-				console.log(indice0);
-				$("#"+ indice0).hide();
+
 		
 
 	    		var ides = "cont" + i
@@ -170,6 +168,11 @@ window.onload = function() {
 				nameF0.text($(this).attr("fight"));
 		        imageF0.attr("src", ($(this).attr("fightFoto")));
 				healthP0.text($(this).attr("fightHealth"));
+
+				var indice0 = "";
+				indice0 = ($(this).attr("indexX"));
+				console.log(indice0);
+				$("#"+ indice0).hide();
 
 
 
